@@ -22,7 +22,8 @@ const candies = [
 
 function searchCandies(search_string, max_price) {
     result_list = []
-    candies.forEach ((item) => {
+    candies.filter(item => {
+    //candies.forEach ((item) => {
         if (item['name'].toLowerCase().startsWith(search_string.toLowerCase()) && item['price'] < max_price) {
             result_list.push(item.name);
         }

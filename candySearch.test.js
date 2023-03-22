@@ -72,7 +72,7 @@ describe('CandySearch.', () => {
     })
     
     it('Returns items that begin with S and price < 4', () => {
-        expect(searchCandies('S', 4)).toEqual (['Skitties','Skittles']);
+        expect(searchCandies('S', 4)).toEqual (['Skitt=ies','Skittles']);
     })
 
     it('Returns items that begin with s and price < 4', () => {
