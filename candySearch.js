@@ -18,15 +18,19 @@ const candies = [
 // console.log(candies[1]['name']); // prints name for object with index 1
 // console.log(candies[1]['price']); // prints value for object with index 1
 
-result_list = []
+
 
 function searchCandies(search_string, max_price) {
+    result_list = []
     candies.forEach ((item) => {
-        if (item['name'].startsWith(search_string) && item['price'] < max_price) {
+        if (item['name'].toLowerCase().startsWith(search_string.toLowerCase()) && item['price'] < max_price) {
             result_list.push(item.name);
         }
     });
     return result_list;
 };
+
+// const search1 = searchCandies('P',7);
+// console.log(search1);
 
 module.exports = searchCandies;

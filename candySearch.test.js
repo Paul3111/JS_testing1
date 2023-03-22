@@ -60,18 +60,22 @@ const searchCandies = require ('./candySearch')
 
 describe('CandySearch.', () => {
     it('Returns items that begin with Ma and price < 10', () => {
-        expect(searchCandies('Ma', 10)).toEqual ['Mars','Maltesers'];
+        expect(searchCandies('Ma', 10)).toEqual (['Mars','Maltesers']);
     })
 
     it('Returns items that begin with Ma and price < 2', () => {
-        expect(searchCandies('Ma', 2)).toEqual ['Mars'];
+        expect(searchCandies('Ma', 2)).toEqual (['Mars']);
     })
 
     it('Returns items that begin with S and price < 10', () => {
-        expect(searchCandies('S', 10)).toEqual ['Skitties','Skittles', 'Starburst'];
+        expect(searchCandies('S', 10)).toEqual (['Skitties','Skittles','Starburst']);
     })
     
     it('Returns items that begin with S and price < 4', () => {
-        expect(searchCandies('S', 4)).toEqual ['Skitties','Skittles'];
+        expect(searchCandies('S', 4)).toEqual (['Skitties','Skittles']);
+    })
+
+    it('Returns items that begin with s and price < 4', () => {
+        expect(searchCandies('s', 4)).toEqual (['Skitties','Skittles']);
     })
 });
